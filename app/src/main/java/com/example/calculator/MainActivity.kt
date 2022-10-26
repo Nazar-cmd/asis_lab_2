@@ -1,5 +1,6 @@
 package com.example.calculator
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -62,8 +63,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun count(view: View) {
-        println(this.res);
 
+        val intent = Intent(this, ResultActivity::class.java);
+
+        var extraResult = ""
+
+        if (this.res != null) {
+            extraResult = this.res.toString();
+        }
+
+        intent.putExtra("result", extraResult)
+        startActivity(intent)
+
+        this.res = null
         clearInput();
     }
 
