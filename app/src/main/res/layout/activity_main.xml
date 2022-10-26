@@ -12,12 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/resultsET"
             style="@style/calculatorInput"
-            android:id="@+id/resultsTV"
 
-            app:helperText="Enter number here..."
-            app:helperTextTextAppearance="@style/calculatorInput"
+            android:hint="Enter numbers"
+            android:inputType="number"
             app:layout_constraintBottom_toTopOf="@+id/guideline8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,32 +43,48 @@
 
                 <Button
                     style="@style/calculatorActionButton"
+                    android:onClick="add"
                     android:text="+" />
 
                 <Button
                     style="@style/calculatorActionButton"
-                    android:text="-" />
+                    android:text="-"
+                    android:onClick="subtract"
+                    />
             </LinearLayout>
 
             <LinearLayout style="@style/calculatorRow">
 
                 <Button
                     style="@style/calculatorActionButton"
-                    android:text="/" />
+                    android:text="/"
+                    android:onClick="divide"
+                    />
 
                 <Button
                     style="@style/calculatorActionButton"
-                    android:text="*" />
+                    android:text="*"
+                    android:onClick="multiply"
+                    />
             </LinearLayout>
 
             <LinearLayout style="@style/calculatorRow">
 
                 <Button
                     style="@style/calculatorActionButton"
-                    android:text="Очистити" />
+                    android:text="Очистити"
+                    android:onClick="clear" />
 
                 <Button
                     style="@style/calculatorActionButton"
+                    android:text="AND"
+                    android:onClick="and" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/calculatorRow">
+                <Button
+                    style="@style/calculatorActionButton"
+                    android:onClick="count"
                     android:text="Результат" />
             </LinearLayout>
         </LinearLayout>
