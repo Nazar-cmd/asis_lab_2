@@ -16,7 +16,7 @@
             android:id="@+id/resultsET"
             style="@style/calculatorInput"
 
-            android:hint="Enter numbers"
+            android:hint="Type first number then press AND type second number. Than select action abd press Result."
             android:inputType="number"
             app:layout_constraintBottom_toTopOf="@+id/guideline8"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.3" />
+            app:layout_constraintGuide_percent="0.5" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -68,24 +68,22 @@
                     />
             </LinearLayout>
 
+
             <LinearLayout style="@style/calculatorRow">
+                <Button
+                    style="@style/calculatorActionButton"
+                    android:onClick="count"
+                    android:text="Result" />
 
                 <Button
                     style="@style/calculatorActionButton"
-                    android:text="Очистити"
+                    android:text="Clear"
                     android:onClick="clear" />
 
                 <Button
                     style="@style/calculatorActionButton"
                     android:text="AND"
                     android:onClick="and" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/calculatorRow">
-                <Button
-                    style="@style/calculatorActionButton"
-                    android:onClick="count"
-                    android:text="Результат" />
             </LinearLayout>
         </LinearLayout>
 

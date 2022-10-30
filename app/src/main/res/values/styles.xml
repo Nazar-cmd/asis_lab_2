@@ -5,7 +5,7 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:background">@color/white</item>
-        <item name="android:textColor">@color/grey_900</item>
+        <item name="android:textColor">@color/primary_800</item>
         <item name="android:padding">10dp</item>
         <item name="android:textSize">30sp</item>
     </style>
@@ -14,22 +14,23 @@
         <item name="android:layout_weight">1</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0dp</item>
+        <item name="android:background">@color/primary_100</item>
     </style>
 
     <style name="calculatorActionButton">
         <item name="android:layout_weight">1</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="selectableItemBackground">@color/grey_400</item>
-        <item name="android:background">@drawable/calculator_button_stroke</item>
+        <item name="android:background">@color/primary</item>
+        <item name="android:layout_margin">1sp</item>
         <item name="android:textSize">25sp</item>
-        <item name="android:textColor">@color/grey_900</item>
+        <item name="android:textColor">@color/primary_100</item>
     </style>
 
     <style name="calculatorResultText">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">28sp</item>
-        <item name="android:textColor">@color/grey_900</item>
+        <item name="android:textColor">@color/primary_800</item>
     </style>
 </resources>
