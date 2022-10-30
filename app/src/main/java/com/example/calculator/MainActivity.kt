@@ -4,9 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.calculator.databinding.ActivityMainBinding
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
 
     private var res: Float? = null;
 
@@ -15,17 +18,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 
     fun getResultFieldValue(): Float  {
-        var input: TextInputEditText = findViewById(R.id.resultsET)
+        var input = binding.resultsET;
 
         return input.text.toString().toFloat();
     }
 
     fun clearInput() {
-        var input: TextInputEditText = findViewById(R.id.resultsET)
+        var input = binding.resultsET
         input.setText("");
     }
 
