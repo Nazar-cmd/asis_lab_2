@@ -12,16 +12,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/calculatorHeader"
+            android:text="Type first number then press AND type second number. Than select action and press Result."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/resultsET"
             style="@style/calculatorInput"
 
-            android:hint="Type first number then press AND type second number. Than select action abd press Result."
             android:inputType="number"
             app:layout_constraintBottom_toTopOf="@+id/guideline8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline8"
