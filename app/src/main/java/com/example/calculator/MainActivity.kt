@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.calculator.databinding.ActivityMainBinding
-import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
 
@@ -68,7 +67,7 @@ class MainActivity : AppCompatActivity() {
 
     fun count(view: View) {
 
-        val intent = Intent(this, ResultActivity::class.java);
+        val intent = Intent(this, CountActivity::class.java);
 
         var extraResult = ""
 
